@@ -49,13 +49,13 @@ var startGame = function() {
 
     // responds to crystals
     //var yourScore = getElementById(red, blue, yellow, green.onclick(math.sum));
-    yourScore.innerHTML = 0;
-    targetScore.innerHTML = getRandomValue(10, 4);
+    // yourScore.innerHTML = 0;
+    // targetScore.innerHTML = randomNumber(10, 4);
 
-    function addToScore(val) {
-    var numberToAdd = parseInt(val);
-    var currentScore = parseInt(yourScore.innerHTML);
-    yourScore.innerHTML = numberToAdd + currentScore;
+    // function addToScore(val) {
+    // var numberToAdd = parseInt(val);
+    // var yourScore = parseInt(yourScore.innerHTML);
+    // yourScore.innerHTML = numberToAdd + yourScore;
 };
 };
 
