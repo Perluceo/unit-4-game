@@ -5,4 +5,4 @@ The famous game of Black Jack or 21 is the underlying premise of Crystal Collect
                 lose if you meet it you win.
                 Good luck!!
 
-Comments:  Still working on getting each crystal to add to 'yourScore' variable in order to get the winCount and lossCount to            function as designed.
+Comments:  Working on a reset button to clear targetScore and yourScore while keeping track of the wins and losses.
