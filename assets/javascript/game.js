@@ -6,11 +6,14 @@ var red = 0;
 
 // target and your score variables
 var targetScore = 0;
-var currentScore = 0;
+var yourScore = 0;
 
 // wins and losses variables
 var winCount = 0;
 var lossCount = 0;
+
+// div variable
+var yourScoreTag =  document.getElementById("yourScore");
 
 
 // functions
@@ -47,32 +50,45 @@ var startGame = function() {
     red);
     console.log ("-------------------------");
 
-    // responds to crystals
-    //var yourScore = getElementById(red, blue, yellow, green.onclick(math.sum));
-    // yourScore.innerHTML = 0;
-    // targetScore.innerHTML = randomNumber(10, 4);
+};
 
-    // function addToScore(val) {
-    // var numberToAdd = parseInt(val);
-    // var yourScore = parseInt(yourScore.innerHTML);
-    // yourScore.innerHTML = numberToAdd + yourScore;
-};
-};
+
+function didYouWin() {
+    yourScoreTag.innerHTML = yourScore;
+    if(yourScore > targetScore) {
+        lossCount++;
+        $("#lossCount").text(lossCount);
+    } else if (yourScore === targetScore) {
+        winCount++;
+        $("#winCount").text(winCount);
+    }
+
+}
+// $(newGame)
+
 
 $("#blue").click(function() {
     console.log(blue);
+    yourScore += blue;
+    didYouWin() 
 });
 
 $("#green").click(function() {
     console.log(green);
+    yourScore += green;
+    didYouWin()
 });
 
 $("#purple").click(function() {
     console.log(purple);
+    yourScore += purple;
+    didYouWin()
 });
 
 $("#red").click(function() {
     console.log(red);
+    yourScore += red;
+    didYouWin()
 });
 
 startGame();
