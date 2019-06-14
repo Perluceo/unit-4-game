@@ -27,7 +27,7 @@ var randomNumber = function(min, max) {
 var startGame = function() {
     console.log("START")
     //reset current score 
-    var yourNumber = 0;
+    yourScore = 0;
 
     //set target score range
     targetScore = randomNumber(25, 183);
@@ -57,10 +57,14 @@ function didYouWin() {
     yourScoreTag.innerHTML = yourScore;
     if(yourScore > targetScore) {
         lossCount++;
+        alert("Sorry, you lost.");
         $("#lossCount").text(lossCount);
+        startGame();
     } else if (yourScore === targetScore) {
         winCount++;
         $("#winCount").text(winCount);
+        alert("You won!");
+        startGame();
     }
 
 }
